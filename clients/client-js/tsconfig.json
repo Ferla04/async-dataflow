@@ -2,12 +2,17 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": { "*": ["types/*"] },
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "target": "es2020",
     "declaration": true,
     "outDir": "./dist",
     "sourceMap": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
   },
   "exclude": [
     "node_modules",
