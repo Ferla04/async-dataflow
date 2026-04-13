@@ -1,12 +1,12 @@
-import { ChannelMessage } from "../channel-message";
-import { RetryTimer } from "../retry-timer";
-import { MessageDecoder, BinaryDecoder, JsonDecoder } from "../decoder";
-import { Protocol } from "./protocol";
-import { Utils } from "../utils";
-import { AsyncConfig } from "../async-config";
-import { Transport } from "./transport";
-import { TransportError } from "./transport-error";
-import { SocketState } from "./socket-state";
+import { ChannelMessage } from "../channel-message.js";
+import { RetryTimer } from "../retry-timer.js";
+import { BinaryDecoder, JsonDecoder, type MessageDecoder } from "../decoder/index.js";
+import { Protocol } from "./protocol.js";
+import { Utils } from "../utils.js";
+import type { AsyncConfig } from "../async-config.js";
+import { Transport } from "./transport.js";
+import { TransportError } from "./transport-error.js";
+import { SocketState } from "./socket-state.js";
 
 export class WsTransport implements Transport {
     private actualToken;

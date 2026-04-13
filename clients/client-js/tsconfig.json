@@ -6,12 +6,20 @@
     "moduleResolution": "NodeNext",
     "target": "es2020",
     "declaration": true,
+    "rootDir": "./src",
     "outDir": "./dist",
-    "sourceMap": true
+    "sourceMap": true,
+    "types": ["node"]
+  },
+ "ts-node": {
+    "esm": true,
+    "transpileOnly": true
   },
   "exclude": [
     "node_modules",
     "dist",
-    "test"
+    "test",
+    "**/*.test.ts",
+    "**/*.spec.ts"
   ]
 }
